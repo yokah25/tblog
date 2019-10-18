@@ -1,0 +1,2 @@
+class Trablog < ApplicationRecord
+end

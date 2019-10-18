@@ -1,0 +1,8 @@
+<div class="contents row" >
+  <% @trablogs.each do |trablog| %>
+      <% if user_signed_in? && current_user.id == trablog.user_id %>
+        <li><%= link_to '削除', "/trablogs/#{trablog.id}", method: :delete %></li>
+      <% end %>
+    <p><%= trablog.text %></p>
+  <% end %>
+</div>
